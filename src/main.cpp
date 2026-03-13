@@ -130,6 +130,9 @@ void setup() {
     delay(2000);
  
     feederServo.attach(SERVO_PIN);
+
+    feedFish();  // Beri pakan sekali saat startup untuk memastikan semuanya bekerja, lalu reset countdown.
+    
     feederServo.write(SERVO_CLOSE);
  
     prevMillis = millis();
